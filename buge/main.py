@@ -15,7 +15,8 @@ def main():
         openai_api_key = input("Please enter your OpenAI API key: ")
 
         # Write value to .env file
-        with open(".env", "w") as f:
+        env_file_path = os.path.join(os.path.dirname(__file__), ".env")
+        with open(env_file_path, "w") as f:
             f.write(f"OPENAI_API_KEY={openai_api_key}")
         
         load_dotenv()
