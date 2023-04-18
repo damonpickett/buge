@@ -28,7 +28,7 @@ def main():
     console = Console()
 
     if sys.version_info < (3, 7):
-        console.print("[bold red]Error:[/bold red] DBUG requires Python 3.7 or higher to run.")
+        console.print("[bold red]Error:[/bold red] BUGE requires Python 3.7 or higher to run.")
         console.print("Please update to a newer version of Python.\n")
         console.print("[bold]Suggestions:[/bold]")
         console.print("- Install the latest version of Python 3 from the official Python website (https://www.python.org/downloads/).")
