@@ -15,7 +15,7 @@
 
 buge is a command-line application that helps developers understand and troubleshoot common error messages by generating explanations and solutions using the OpenAI GPT-3 language model. Here's buge in action:
 
-![BUGE Demo](./assets/buge-demo-gif-2.gif)
+![BUGE Demo](./assets/buge-gif-color-2.gif)
 
 ## Instructions
 
