@@ -4,12 +4,12 @@ requires = ["setuptools", "wheel"]
 
 [project]
 name = "buge"
-version = "0.0.5"
+version = "0.0.6"
 authors = [
   { name="Damon Pickett", email="damon.pickett@gmail.com" },
 ]
 description = "buge is a command-line application that uses the OpenAI API to diagnose bugs when programming."
-readme = "README.md"
+readme = "pypiREADME.md"
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3",
