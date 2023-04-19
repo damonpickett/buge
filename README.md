@@ -13,7 +13,17 @@
 
 ## Description
 
-BUGE is a command-line application that helps developers understand and troubleshoot common error messages by generating explanations and solutions using the OpenAI GPT-3 language model.
+buge is a command-line application that helps developers understand and troubleshoot common error messages by generating explanations and solutions using the OpenAI GPT-3 language model. Here's buge in action:
+
+![BUGE Demo](./assets/buge-demo-gif-2.gif)
+
+## Instructions
+
+1. Install buge by entering `pip3 install buge` in your terminal.
+2. Call buge from anywhere in your terminal by entering `buge`.
+3. If it's your first time calling buge, you will be prompted for you OpenAI API key. You'll only need to do this once.
+4. You'll then be prompted for your error code. Paste you error code into your terminal and hit 'enter'.
+5. buge makes an API call and then returns the the meaning of the error code, possible causes, and possible solutions.
 
 This program is free to use. However, if you would like to <a href="https://www.buymeacoffee.com/damonpickett" target="_blank">buy me a coffee</a>, you can do so here:
 
