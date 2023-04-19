@@ -27,14 +27,6 @@ def main():
 
     console = Console()
 
-    if sys.version_info < (3, 7):
-        console.print("[bold red]Error:[/bold red] BUGE requires Python 3.7 or higher to run.")
-        console.print("Please update to a newer version of Python.\n")
-        console.print("[bold]Suggestions:[/bold]")
-        console.print("- Install the latest version of Python 3 from the official Python website (https://www.python.org/downloads/).")
-        console.print("- Use a Python version manager like pyenv to easily switch between multiple versions of Python.\n")
-        sys.exit(1)
-
     def get_error_explanation(error_message):
         base_prompt = (f"Explain the following error code in simple terms: `{error_message}`")
         base_response = openai.Completion.create(
@@ -71,18 +63,20 @@ def main():
         )
         third_response_text = third_response.choices[0].text.strip()
 
-        print('----------')
         print("")
-        print("Meaning:")
-        print(base_response_text)
+        console.print('[bold]--------------------[/bold]')
         print("")
-        print("Possible Causes:")
-        print(secondary_response_text)
+        console.print("[bold cyan]Meaning:[/bold cyan]")
+        console.print(f"[green]`{base_response_text}`[green]")
         print("")
-        print("Possible Solutions:")
-        print(third_response_text)
+        console.print("[bold cyan]Possible Causes:[/bold cyan]")
+        console.print(f"[green]`{secondary_response_text}`[green]")
         print("")
-        print('----------')
+        console.print("[bold cyan]Possible Solutions:[/bold cyan]")
+        console.print(f"[green]`{third_response_text}`[green]")
+        print("")
+        console.print('[bold]--------------------[/bold]')
+        print("")
 
     get_error_explanation(error_message)
 
