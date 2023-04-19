@@ -36,19 +36,52 @@ def main():
         sys.exit(1)
 
     def get_error_explanation(error_message):
-        prompt = (f'''Generate an explanation and solution for the following error message: `{error_message}`. Preface the explanation with "Explanation: " and the solution with "Solution: " and put Explanation and Solution on separate lines.''')
-        response = openai.Completion.create(
+        base_prompt = (f"Explain the following error code in simple terms: `{error_message}`")
+        base_response = openai.Completion.create(
             engine="text-davinci-003",
-            prompt=prompt,
+            prompt=base_prompt,
             max_tokens=1024,
             n=1,
             stop=None,
             temperature=0.7,
         )
-        response_text = response.choices[0].text.strip()
+        base_response_text = base_response.choices[0].text.strip()
+
+        # second prompt
+        secondary_prompt = (f"Suggest multiple possible causes for this error code:`{error_message}`")
+        secondary_response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt=secondary_prompt,
+            max_tokens=1024,
+            n=1,
+            stop=None,
+            temperature=0.7,
+        )
+        secondary_response_text = secondary_response.choices[0].text.strip()
+
+        # third prompt
+        third_prompt = (f"Suggest multiple possible solutions for the following error code:`{error_message}`")
+        third_response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt=third_prompt,
+            max_tokens=1024,
+            n=1,
+            stop=None,
+            temperature=0.7,
+        )
+        third_response_text = third_response.choices[0].text.strip()
+
+
         print('----------')
         print("")
-        print(response_text)
+        print("Meaning:")
+        print(base_response_text)
+        print("")
+        print("Possible Causes:")
+        print(secondary_response_text)
+        print("")
+        print("Possible Solutions:")
+        print(third_response_text)
         print("")
         print('----------')
 

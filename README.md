@@ -13,6 +13,8 @@
 
 ## Description
 
+BUGE is a command-line application that helps developers understand and troubleshoot common error messages by generating explanations and solutions using the OpenAI GPT-3 language model.
+
 This program is free to use. However, if you would like to <a href="https://www.buymeacoffee.com/damonpickett" target="_blank">buy me a coffee</a>, you can do so here:
 
 <p align="center">
@@ -21,13 +23,19 @@ This program is free to use. However, if you would like to <a href="https://www.
   </a>
 </p>
 
-## Tech Stack
+## Dependencies
+
+- [OpenAI](https://pypi.org/project/openai/): A cloud-based platform that allows users to build various artificial intelligence models, including natural language processing models that can generate text.
+- [python-dotenv](https://pypi.org/project/python-dotenv/): Python-dotenv reads key-value pairs from a .env file and can set them as environment variables. It helps in the development of applications following the [12-factor](https://12factor.net/) principles.
+- [rich package](https://pypi.org/project/rich): Rich is a Python library for rich text and beautiful formatting in the terminal.
 
 ## Installation
 
 ## Usage
 
 ## Contributing
+
+Contributions to BUGE are welcome! If you encounter any issues, have suggestions for improvements, or want to add new features, feel free to submit a pull request or open an issue in the GitHub repository.
 
 ## Licence
 
@@ -50,3 +58,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Disclaimer
+
+Please note that BUGE is a tool that generates explanations and solutions based on a language model, and its suggestions should be used as a starting point for troubleshooting, not as definitive solutions. It's always recommended to thoroughly understand the error messages and the underlying code before making changes. BUGE is not responsible for any unintended consequences that may arise from using its generated explanations and solutions.
