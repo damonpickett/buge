@@ -71,7 +71,6 @@ def main():
         )
         third_response_text = third_response.choices[0].text.strip()
 
-
         print('----------')
         print("")
         print("Meaning:")
