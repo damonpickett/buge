@@ -19,6 +19,8 @@ buge is a command-line application that helps developers understand and troubles
 
 ## Instructions
 
+[YouTube Video Tutorial](https://www.youtube.com/watch?v=M3bIazMkI44)
+
 1. Install buge by entering `pip3 install buge` in your terminal.
 2. Call buge from anywhere in your terminal by entering `buge`.
 3. If it's your first time calling buge, you will be prompted for you OpenAI API key. You'll only need to do this once.
